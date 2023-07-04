@@ -5,6 +5,7 @@ using UnityEngine;
 public class SphereControl : MonoBehaviour
 {
     public GameObject targetCube = default;
+    public Vector3 rotateDirection = Vector3.zero;
     private float sphereSpeed = 30.0f;
 
     // Start is called before the first frame update
@@ -16,6 +17,6 @@ public class SphereControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.RotateAround(targetCube.transform.position, Vector3.up, sphereSpeed * Time.deltaTime);
+        transform.RotateAround(targetCube.transform.position, rotateDirection, sphereSpeed * Time.deltaTime);
     }
 }
